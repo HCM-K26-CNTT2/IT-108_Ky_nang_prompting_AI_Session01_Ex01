@@ -1,0 +1,21 @@
+﻿Bài 1: Hiểu đúng bản chất "Máy dự đoán từ tiếp theo" (Next Token Prediction) của LLM 
+- Phần 1 (Bóc tách nhận thức sai): Dựa vào Mục 2.1 Lesson 01, hãy chỉ ra 2 điểm sai lầm trong báo cáo của Nam. Trích dẫn thuật ngữ "Next Token Prediction" và "Pre-training" từ bài đọc để giải thích tại sao LLM lại tính sai phép cộng trên.
+      -     Hai điểm sai lầm trong báo cáo của Nam:
+* Sai lầm 1: Cho rằng AI bị hỏng phần mềm hoặc máy chủ bị lỗi tính toán. (Thực tế hệ thống vẫn hoạt động bình thường theo đúng thiết kế của nó).
+* Sai lầm 2: Nghĩ rằng AI có hàng trăm tỷ tham số thì bên trong phải có bộ vi xử lý máy tính để tính toán số học chính xác 100%. 
+
+
+* Trích dẫn thuật ngữ "Next Token Prediction" và "Pre-training" từ bài đọc để giải thích tại sao LLM lại tính sai phép cộng trên.
+* LLM hoạt động dựa trên cơ chế Next Token Prediction (Dự đoán từ tiếp theo). Khi nhận câu hỏi, AI sẽ tính toán xác suất xem con số nào có khả năng xuất hiện tiếp theo cao nhất dựa trên những gì nó đã được học ở giai đoạn Pre-training. Vì vậy, với các phép tính phức tạp, ít gặp trong những gì nó đã học trước đó, AI sẽ đoán ra các con số gần giống nhưng sai lệch về mặt toán học.
+
+
+- Phần 2: (Sửa lỗi & Prompting) Đề xuất câu lệnh (Prompt) chuẩn giúp ChatGPT kích hoạt công cụ bổ trợ (ví dụ: Code Interpreter / Python) hoặc yêu cầu AI suy luận để cho ra kết quả số học chính xác 100%.
+
+
+kích hoạt công cụ bổ trợ (ví dụ: Code Interpreter / Python)
+"Hãy sử dụng Code Interpreter để tính toán phép cộng sau: 
+15.480 + 28.750và chỉ xuất ra kết quả chính xác sau khi chạy phép tính đó."
+
+
+Yêu cầu AI suy luận để cho ra kết quả số học chính xác 100%.
+"Hãy tính phép cộng 15.480 + 28.750.  Không được đoán trực tiếp kết quả, hãy tách thành từng hàng đơn vị, hàng chục, hàng trăm, hàng nghìn, hàng chục nghìn. Sau đó,  cộng lần lượt từ phải sang trái và ghi kết quả chính xác nhất
